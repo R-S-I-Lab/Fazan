@@ -48,8 +48,10 @@ function gameOver(message) {
     clearInterval(timer);
     turnCard.innerText = "Game Over!!!" + message;
     const restartButton = document.createElement("button");
+    restartButton.innerHTML = "Restart Game";
     restartButton.setAttribute("onclick", "window.location.reload()");
-    turnCard.appendChild(restartButton);
+    restartButton.setAttribute("class", "btn btn-outline-light");
+    document.getElementById("turnCard").appendChild(restartButton);
 }
 
 async function aiTurn() {
